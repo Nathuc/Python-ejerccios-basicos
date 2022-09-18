@@ -1,3 +1,8 @@
+
+# Conversor de de pesos colombianos mexicanos y argentinos a dolares 🤑 """
+# Se debe ajustar los factores de conversión a la fecha actual
+
+
 def conversor(tipo_pesos, valor_dolar):
     pesos = input("Cuatos pesos "+ tipo_pesos +" tienes?:")
     pesos = float(pesos)
