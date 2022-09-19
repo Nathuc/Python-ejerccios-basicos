@@ -3,7 +3,7 @@
 
 
 def conversor(tipo_pesos, valor_dolar):
-    pesos = input("Cuatos pesos "+ tipo_pesos +" tienes?:")
+    pesos = input("Cuantos pesos "+ tipo_pesos +" tienes?:")
     pesos = float(pesos)
     dolares = pesos / valor_dolar
     dolares = round(dolares, 2)
@@ -15,7 +15,7 @@ menu = """
 Bienveenido al conversor de monedas 💸
 Seleccione 
 1- pesos colombianos
-2 - pesos argentinos 
+2- pesos argentinos 
 3- pesos mexicanos
 Elija una opción:"""
 
