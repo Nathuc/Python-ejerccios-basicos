@@ -1,3 +1,9 @@
+#Este programa determina si un número es primo 1️⃣2️⃣3️⃣.
+# Siga las instrucciones del programa. 
+
+#Definimos la función donde se almacenara el parametro 
+#que retornara TRUE si el parametro cumple con las condiciones para ser primo y FALSE de ser lo contrario.
+
 def es_primo(numero):
     contador = 0
 
@@ -11,6 +17,7 @@ def es_primo(numero):
     else:
         return False
 
+# Definimos la función que interactuara con el usuario.
 def run():
     numero = int(input ('Escribe un número: '))
     if es_primo(numero):
