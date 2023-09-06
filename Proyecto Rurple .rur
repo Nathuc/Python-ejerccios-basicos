@@ -1,0 +1,217 @@
+print "Bienvenido al Triqui Robotico"
+name1=input_string("Nombre de usuario numero uno:")
+r1=UsedRobot(1,1,'s',colour='blue')
+name2=input_string("Nombre de ususario numero dos:")
+r2=UsedRobot(5,1,'s',colour='green')
+#variables
+a=0
+b1=[]
+b2=[]
+cont=[]
+cont2=[]
+mov=0
+mov2=0
+#Movimiento de los jugadores
+def mov11():
+    global mov1
+    global cont
+    if mov1==1:
+        r11=UsedRobot(2,4,'s',colour='blue')
+        cont.append(r11)
+    if mov1==2:
+            r12=UsedRobot(3,4,'s',colour='blue')
+            cont.append(r12)
+    if mov1==3:
+            r13=UsedRobot(4,4,'s',colour='blue')
+            cont.append(r13)
+    if mov1==4:
+            r14=UsedRobot(2,3,'s',colour='blue')
+            cont.append(r14)
+    if mov1==5:
+            r15=UsedRobot(3,3,'s',colour='blue')
+            cont.append(r15)
+    if mov1==6:
+            r16=UsedRobot(4,3,'s',colour='blue')
+            cont.append(r16)
+    if mov1==7:
+            r17=UsedRobot(2,2,'s',colour='blue')
+            cont.append(r17)
+    if mov1==8:
+            r18=UsedRobot(3,2,'s',colour='blue')
+            cont.append(r18)
+    if mov1==9:
+            r19=UsedRobot(4,2,'s',colour='blue')
+            cont.append(r19)
+
+def mov22():
+    global mov2
+    if mov2==1:
+        r21=UsedRobot(2,4,'s',colour='green')
+        cont2.append(r21)
+    if mov2==2:
+            r22=UsedRobot(3,4,'s',colour='green')
+            cont2.append(r22)
+    if mov2==3:
+            r23=UsedRobot(4,4,'s',colour='green')
+            cont2.append(r23)
+    if mov2==4:
+            r24=UsedRobot(2,3,'s',colour='green')
+            cont2.append(r24)
+    if mov2==5:
+            r25=UsedRobot(3,3,'s',colour='green')
+            cont2.append(r25)
+    if mov2==6:
+            r26=UsedRobot(4,3,'s',colour='green')
+            cont2.append(r26)
+    if mov2==7:
+            r27=UsedRobot(2,2,'s',colour='green')
+            cont2.append(r27)
+    if mov2==8:
+            r28=UsedRobot(3,2,'s',colour='green')
+            cont2.append(r28)
+    if mov2==9:
+            r29=UsedRobot(4,2,'s',colour='green')
+            cont2.append(r29)
+#Verificador de movimiento 
+def rep1():
+    global mov1
+    mov1=input_int("ingresa un movimiento")
+    b1.append(mov1)
+    print b1
+    while b1.count(mov1)==2:
+        b1.remove(mov1)
+        print b1
+        print"posicion invalida"
+        mov1=input_int("ingresa un movimiento")
+        b.append(mov1)
+        print b1
+def rep2():
+    global mov2
+    mov2=input_int("ingresa un movimiento")
+    b2.append(mov2)
+    print b2
+    while b2.count(mov2)==2:
+        b2.remove(mov2)
+        print b2
+        print"posicion invalida"
+        mov2=input_int("ingresa un movimiento")
+        b2.append(mov2)
+        print b2
+#comprobador del resultado
+def rev1():
+    global a
+    g1=set([1, 2, 3])
+    g2=set([4, 5, 6])
+    g3=set([7, 8, 9])
+    g4=set([1, 5, 9])
+    g5=set([3, 5, 9])
+    g6=set([1, 4, 7])
+    g7=set([2, 5, 8])
+    g8=set([3, 6, 9])
+    global b1
+    if g1.issubset(b1):
+        print "gana el jugador"+ name1
+        a=1
+    if g2.issubset(b1):
+        print "gana el jugador"+ name1
+        a=1
+    if g3.issubset(b1):
+        print "gana el jugador"+ name1
+        a=1
+    if g4.issubset(b1):
+        print "gana el jugador"+ name1
+        a=1
+    if g5.issubset(b1):
+        print "gana el jugador"+ name1
+        a=1
+    if g6.issubset(b1):
+        print "gana el jugador"+ name1
+        a=1
+    if g7.issubset(b1):
+        print "gana el jugador"+ name1
+        a=1
+    if g8.issubset(b1):
+        print "gana el jugador"+ name1
+        a=1
+def rev2():
+    global a
+    g1=set([1, 2, 3])
+    g2=set([4, 5, 6])
+    g3=set([7, 8, 9])
+    g4=set([1, 5, 9])
+    g5=set([3, 5 ,7])
+    g6=set([1, 4, 7])
+    g7=set([2, 5 , 8])
+    g8=set([3, 6, 9])
+    global b2
+    if g1.issubset(b2):
+        print "Gana:"+ name1
+        a=1
+    if g2.issubset(b2):
+        print "Gana:"+ name1
+        a=1
+    if g3.issubset(b2):
+        print "Gana:"+ name1
+        a=1
+    if g4.issubset(b2):
+        print "Gana:"+ name1
+        a=1
+    if g5.issubset(b2):
+        print "Gana:"+ name1
+        a=1
+    if g6.issubset(b2):
+        print "Gana:"+ name1
+        a=1
+    if g7.issubset(b2):
+        print "Gana:"+ name1
+        a=1
+    if g8.issubset(b2):
+        print "Gana:"+ name1
+        a=1
+#Turnos
+i=0
+while i<4:
+    i=i+1
+    if i%2 !=0:
+        print i, 'Turno \n A Jugar! '+name1
+        rep1()
+        mov11()
+    elif i%2==0:
+         print i, 'Turno \n A Jugar! '+name2
+         rep2()
+         mov22()
+print '5 Turno \n A Jugar! '+name1
+rep1()
+mov11()
+rev1()
+
+if a==0:
+    print '6 Turno \n A Jugar! '+name2
+    rep2()
+    mov22()
+    rev2()
+if a==0:
+    print '7 Turno \n A Jugar! '+name1
+    rep1()
+    mov11()
+    rev1()
+if a==0:
+    print '8 Turno \n A Jugar! '+name2
+    rep2()
+    mov22()
+    rev2()
+if a==0:
+    print '9 Turno \n A Jugar! '+name1
+    rep1()
+    mov11()
+    rev1()
+if a==0:
+    print "Empate"
+print "*************************************************"
+#Limpiar Juego
+b1*=0
+b2*=0
+cont*=0
+cont2*=0
+
+turn_off()
